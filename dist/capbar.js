@@ -2,11 +2,13 @@
  * liti.js
  */
 
-;(function($, window, document, undefined) {
+;(function($, window) {
 	
 	'use strict';
 	
-	/* ---- utils ---- */
+	/*
+	 * Utils
+	 */
 	var utils = {
 		
 		
@@ -19,8 +21,10 @@
 		}
 	};
 	
-	/* ---- lowbar ---- */
-	window.lowbar = function(attr) {
+	/*
+	 * Capbar
+	 */
+	window.Capbar = function(attr) {
 		
 		attr = attr || {};
 		if(!attr.element) {
@@ -36,7 +40,9 @@
 		var isInvalid = false;
 		var progress = 0;
 		
-		/* -- public -- */
+		/*
+		 * Public functions
+		 */
 		function start() {
 			$(selector).on('focus', stage);
 			$(selector).on('keyup', increment);
@@ -50,7 +56,9 @@
 			$(selector).off('blur', unstage);
 		}
 		
-		/* -- private -- */
+		/*
+		 * Private functions
+		 */
 		function stage() {
 			var el = $(this);
 			$(element).addClass('active');
@@ -107,4 +115,4 @@
 			stop  : stop
 		};
 	};
-})(jQuery, window, document);
+})(jQuery, window);
