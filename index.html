@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<link rel="stylesheet" href="demo/base.css">
+		<link rel="stylesheet" href="demo/prism.css">
+		<link rel="stylesheet" href="dist/capbar.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="demo/prism.js"></script>
+		<script src="dist/capbar.js"></script>
+		<script>
+		var capbar;
+		$(document).ready(function() {
+			capbar = new Capbar();
+			capbar.start();
+		});
+		</script>
+	</head>
+
+	<body class="row">
+		<header class="col-6 offset-3 last">
+			<h1>
+			Capbar.js
+			</h1>
+			<h6>
+			Let your users know when that input field text is too long.
+				<br />
+			Requires jquery.
+			</h6>
+		</header>
+		<section class="col-6 offset-3 last">
+			
+			<h3>
+			Type something below
+			</h3>
+			<input type="text" data-target="capbar" data-maxchars="8">
+			<br />
+			<br />
+			<p>Want more?</p>
+			<textarea data-target="capbar" data-maxchars="140">
+			</textarea>
+			<br />
+			<small>140 Characters</small>
+			<br />
+			<br />
+			
+			<h4>
+			Download
+			</h4>
+			<a href="https://raw.github.com/shash7/capbar/master/dist/capbar.js">capbar.js</a> | 
+			<a href="https://raw.github.com/shash7/capbar/master/dist/capbar.css">capbar.css</a>
+			<br />
+			<br />
+			Or clone directly from <a href="https://github.com/shash7/capbar">github.</a>
+			<br />
+			<br />
+			
+			<h4>
+			Dependencies :
+			</h4>
+			<p>jquery</p>
+			
+			<h3 id="1markup">1. Markup</h3>
+			<p>Add modaljs to your page</p>
+			<pre><code class="language-markup">&lt;link rel="stylesheet" href="capbar.css"&gt;
+			&lt;script src="capbar.js"&gt;&lt;/script&gt;
+			</code></pre>
+			
+			<h3 id="2javascript">2. Javascript</h3>
+			<p>Running this code will create and show a modal window.</p>
+			<pre><code class="language-javascript">var capbar = new Capbar();
+			capbar.start();
+			</code></pre>
+			<p>To unbind all event listners and cleanly stop capbar, use the stop() method</p>
+			<pre><code class="language-javascript">capbar.stop();
+			</code></pre>
+			
+			<h3 id="3linkinginputtags">3. Linking input tags</h3>
+			<p>Add data-target="capbar" and data-maxchars=(max characters) to your input field. See the code below.</p>
+			<pre><code class="language-markup">&lt;input type="text" data-target="capbar" data-maxchars="8"&gt;
+			</code></pre>
+			
+			<h3 id="4css">4. Css</h3>
+			<p>The dafault css should be adequate. However, you can customize the bar by modifying the .bar class</p>
+			
+			<h3 id="parameters">Parameters</h3>
+			<pre><code class="language-javascript">var capbar = new Capbar({
+					element  : '.bar'    // Default : Checks if .bar class is present. If not then it will create and append an element in body.
+					selector : '.capbar' // Default : uses data-target="capbar'.
+			});
+			</code></pre>
+			
+			<br />
+			<br />
+			
+			<p><strong>Credits &amp; license</strong></p>
+			<p>Created by shash7.
+			Licensed under MIT license</p>
+			<p>Patches welcome.</p>
+		</section>
+		<a href="https://github.com/shash7/capbar"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+	</body>
+</html>
