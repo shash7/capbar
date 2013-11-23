@@ -1,5 +1,6 @@
 /*
- * liti.js
+ * capbar.js
+ * version 1.0
  */
 
 ;(function($, window) {
@@ -34,7 +35,7 @@
 			attr.element = '.bar';
 		}
 		var element = attr.element;
-		var selector = attr.selector || '[data-target="liti"]';
+		var selector = attr.selector || '[data-target="capbar"]';
 		var maxChars = 0;
 		var section = 0;
 		var isInvalid = false;
