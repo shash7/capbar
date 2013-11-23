@@ -10,9 +10,8 @@
 		<script src="demo/prism.js"></script>
 		<script src="dist/capbar.js"></script>
 		<script>
-		var capbar;
 		$(document).ready(function() {
-			capbar = new Capbar();
+			var capbar = new Capbar();
 			capbar.start();
 		});
 		</script>
@@ -35,6 +34,8 @@
 			Type something below
 			</h3>
 			<input type="text" data-target="capbar" data-maxchars="8">
+			<br />
+			<small>8 Characters</small>
 			<br />
 			<br />
 			<p>Want more?</p>
@@ -60,17 +61,21 @@
 			Dependencies :
 			</h4>
 			<p>jquery</p>
+			<br />
+			<br />
 			
 			<h3 id="1markup">1. Markup</h3>
-			<p>Add modaljs to your page</p>
-			<pre><code class="language-markup">&lt;link rel="stylesheet" href="capbar.css"&gt;
-			&lt;script src="capbar.js"&gt;&lt;/script&gt;
+			<p>Add capbar to your page</p>
+			<pre><code class="language-markup">
+&lt;link rel="stylesheet" href="capbar.css"&gt;
+&lt;script src="capbar.js"&gt;&lt;/script&gt;
 			</code></pre>
 			
 			<h3 id="2javascript">2. Javascript</h3>
-			<p>Running this code will create and show a modal window.</p>
-			<pre><code class="language-javascript">var capbar = new Capbar();
-			capbar.start();
+			<p>Running this code will start capbar. Run this after the DOM is loaded, possibly after the ready event.</p>
+			<pre><code class="language-javascript">
+var capbar = new Capbar();
+capbar.start();
 			</code></pre>
 			<p>To unbind all event listners and cleanly stop capbar, use the stop() method</p>
 			<pre><code class="language-javascript">capbar.stop();
@@ -82,13 +87,14 @@
 			</code></pre>
 			
 			<h3 id="4css">4. Css</h3>
-			<p>The dafault css should be adequate. However, you can customize the bar by modifying the .bar class</p>
+			<p>The default css should be adequate. However, you can customize the bar by modifying the .bar class</p>
 			
 			<h3 id="parameters">Parameters</h3>
-			<pre><code class="language-javascript">var capbar = new Capbar({
-					element  : '.bar'    // Default : Checks if .bar class is present. If not then it will create and append an element in body.
-					selector : '.capbar' // Default : uses data-target="capbar'.
-			});
+			<pre><code class="language-javascript">
+var capbar = new Capbar({
+	element  : '.bar'    // Default : Checks if .bar class is present. If not then it will create and append an element in body.
+	selector : '.capbar' // Default : uses data-target="capbar'.
+});
 			</code></pre>
 			
 			<br />
