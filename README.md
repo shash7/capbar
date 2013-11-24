@@ -36,8 +36,11 @@ The dafault css should be adequate. However, you can customize the bar by modify
 	var capbar = new Capbar({
 		element  : '.bar'    // Default : Checks if .bar class is present. If not then it will create and append an element in body.
 		selector : '.capbar' // Default : uses data-target="capbar'.
-		top      : true      // Default : false. Set it to true to set the capbar at the top of the page.
+		top      : true      // Default : false. Set it to true to set capbar at the top of the page.
 	});
+
+### Issues
+capbar won't display above the keyboard in ios devices. To remedy this, set top to true(see parameters).
 
 
 **Credits & license**
