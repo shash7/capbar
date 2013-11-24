@@ -1,7 +1,9 @@
 /*
- * capbar.js
- * version 1.0
- */
+* capbar
+* version 1.1
+* 
+* github.com/shash7/capbar
+*/
 
 ;(function($, window) {
 	
@@ -11,8 +13,6 @@
 	 * Utils
 	 */
 	var utils = {
-		
-		
 		isPresent : function(selector) {
 			if($(selector).length < 1) {
 				return false;
@@ -26,7 +26,7 @@
 	 * Capbar
 	 */
 	window.Capbar = function(attr) {
-		
+	
 		attr = attr || {};
 		if(!attr.element) {
 			if(!utils.isPresent('.bar')) {
@@ -35,6 +35,11 @@
 			attr.element = '.bar';
 		}
 		var element = attr.element;
+		if(attr.top) {
+			$(element).css({
+				'top' : '-4px'
+			});
+		}
 		var selector = attr.selector || '[data-target="capbar"]';
 		var maxChars = 0;
 		var section = 0;
@@ -78,7 +83,7 @@
 			isInvalid = false;
 			progress = 0;
 		}
-			
+						
 		function increment() {
 			var el = $(this);
 			var len = calc(el);
