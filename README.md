@@ -1,6 +1,6 @@
 capbar
 =======
-
+[project page](shash7.github.io/capbar).
 Let your users know when that input field text is too long. Requires jquery.
 
 Dependencies :
