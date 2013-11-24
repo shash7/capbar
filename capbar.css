@@ -1,0 +1,30 @@
+/*
+ * capbar
+ */
+
+.bar
+{
+	position:fixed;
+	left:0;
+	bottom:-4px;
+	height:8px;
+	background-color:#BADA55;
+	opacity:0;
+	
+	pointer-events:none;
+	
+	-webkit-transition: all 200ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+   -moz-transition: all 200ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+     -o-transition: all 200ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        transition: all 200ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+.bar.active
+{
+	opacity:1;
+}
+
+.bar.alert
+{
+	background-color:#F30;
+}
